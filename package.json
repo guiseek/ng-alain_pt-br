@@ -5,10 +5,10 @@
   "author": "cipchk <cipchk@qq.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ng-alain/ng-alain.git"
+    "url": "git+https://github.com/guiseek/ng-alain_pt-br.git"
   },
   "bugs": {
-    "url": "https://github.com/ng-alain/ng-alain/issues"
+    "url": "https://github.com/guiseek/ng-alain_pt-br/issues"
   },
   "homepage": "https://ng-alain.com",
   "license": "MIT",
