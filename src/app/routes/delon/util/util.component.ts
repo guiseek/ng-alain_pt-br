@@ -8,7 +8,7 @@ import { yuan } from '@shared';
   templateUrl: './util.component.html',
 })
 export class UtilComponent {
-  constructor(public messageSrv: NzMessageService) {}
+  constructor(public messageSrv: NzMessageService) { }
 
   // region: string
 
@@ -40,6 +40,9 @@ export class UtilComponent {
   }
   onYuan(value: string) {
     this.yuan_res = yuan(value);
+  }
+  onReal(value: number) {
+    this.yuan_res = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(value)
   }
   onCopy() {
     copy(`time ${+new Date()}`).then(() => this.messageSrv.success(`success`));

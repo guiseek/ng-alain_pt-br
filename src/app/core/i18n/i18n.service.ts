@@ -6,12 +6,14 @@ import { filter } from 'rxjs/operators';
 import { registerLocaleData } from '@angular/common';
 import ngZh from '@angular/common/locales/zh';
 import ngEn from '@angular/common/locales/en';
+import ngPt from '@angular/common/locales/pt';
 import ngZhTw from '@angular/common/locales/zh-Hant';
 
-import { en_US, zh_CN, zh_TW, NzI18nService } from 'ng-zorro-antd';
+import { en_US, zh_CN, zh_TW, pt_BR, NzI18nService } from 'ng-zorro-antd';
 import * as df_en from 'date-fns/locale/en';
 import * as df_zh_cn from 'date-fns/locale/zh_cn';
 import * as df_zh_tw from 'date-fns/locale/zh_tw';
+import * as pt from 'date-fns/locale/pt';
 import { TranslateService } from '@ngx-translate/core';
 import {
   SettingsService,
@@ -31,7 +33,7 @@ interface LangData {
   abbr: string;
 }
 
-const DEFAULT = 'zh-CN';
+const DEFAULT = 'pt-BR';
 const LANGS: { [key: string]: LangData } = {
   'zh-CN': {
     text: '简体中文',
@@ -54,6 +56,14 @@ const LANGS: { [key: string]: LangData } = {
     ng: ngEn,
     zorro: en_US,
     dateFns: df_en,
+    delon: delonEnUS,
+    abbr: '🇬🇧',
+  },
+  'pt-BR': {
+    text: 'Brasil',
+    ng: ngPt,
+    zorro: pt_BR,
+    dateFns: pt,
     delon: delonEnUS,
     abbr: '🇬🇧',
   },
